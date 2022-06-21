@@ -4,10 +4,16 @@ SELECT `name` , `surname`
  FROM `students` 
  WHERE `date_of_birth` LIKE '1990%';
 
+WHERE YEAR( `students` . `date_of_birth`) = 1990
+ORDER BY `students` . `date_of_birth`
+LIMIT 10; // Ci da massimo i primi 10;
+
 2. Selezionare tutti i corsi che valgono più di 10 crediti (479)
 SELECT `name`
 FROM `courses`
-WHERE `cfu` > 10
+WHERE `cfu` > 10;
+
+ORDER BY `courses`  `cfu` ASC //Ascendente
 
 3. Selezionare tutti gli studenti che hanno più di 30 anni
 
@@ -30,7 +36,7 @@ SELECT *
  WHERE `level` = 'magistrale';
 
 7. Da quanti dipartimenti è composta l'università? (12)
-SELECT COUNT(*)
+SELECT COUNT(*) AS `departments_nuumber` //SI DA IL NOME ALLA COLLONA
 FROM `departments`
 
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
@@ -38,6 +44,11 @@ SELECT *
 FROM `teachers` 
 WHERE `phone` IS NOT NULL
 
+OPPURE 
+
+SELECT COUNT(`phone`)
+ FROM `teachers` 
+ WHERE `phone` IS NOT NULL
 
 
 
