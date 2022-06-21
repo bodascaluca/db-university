@@ -1,6 +1,25 @@
 1. Contare quanti iscritti ci sono stati ogni anno
+SELECT COUNT(*) AS `counter_number`,
+YEAR(`students` . `enrolment_date`) as `data_di_inscrizione`
+FROM `students`
+WHERE YEAR(`enrolment_date`)
+GROUP BY `enrolment_date`;
 
+giudto 
+SELECT COUNT(students.id) AS 'madonnaquantosonobravoguardacometicontotutto',
+YEAR(`students` . `enrolment_date`) as `data_di_inscrizione`
+FROM `students`
+-- WHERE YEAR(`enrolment_date`)
+GROUP BY `data_di_inscrizione`
 
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+SELECT COUNT(teachers.id), office_address
+FROM teachers
+GROUP BY office_address
+
+TETS CON LORIS E GABRIE
+SELECT COUNT(name) as Quantità , name FROM teachers GROUP BY name ORDER BY Quantità DESC
+
 3. Calcolare la media dei voti di ogni appello d'esame
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
