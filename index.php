@@ -46,9 +46,9 @@ if($result && $result->num_rows > 0){
     <?php foreach($departments as $department) {?>
         <div>
         <h2><?php echo $department->name; ?></h2>
-        <a href="single-department.php?id=<?php echo $department->id;">Vedi informazioni</a>
+        <a href="single-department.php?id=<?php echo $department->id;?>">Vedi informazioni</a>
     </div>
     <?php }?>
   
-</body>
-</html>
+</body>  
+</html>   
