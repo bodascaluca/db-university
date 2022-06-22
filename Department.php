@@ -23,12 +23,12 @@ class Department {
     public function getContactAsArray(){
         return [
             "indirirzzo" => $this->address,
-            "teledono" => $this->phone,
+            "telefono" => $this->phone,
             "email" => $this->email,
             "website" => $this->website
         ];
     }
-
+  
 
 
 

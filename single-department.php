@@ -9,9 +9,10 @@ require_once __DIR__ . "/Department.php";
 // $result = $conn->query($sql);
 
 //Preparazione dello statement
-$stmt = $conn->prepare("SELECT * FROM `departments` WHERE `id`=?");
-$stmt->bind_param(`d` , $id);
+$stmt = $conn->prepare("SELECT * FROM `departments` WHERE `id`= ?");
+$stmt->bind_param('i' , $id);
 $id = $_GET["id"];
+
 
 //esecuzione id query
 $stmt->execute();

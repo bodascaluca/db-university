@@ -16,7 +16,7 @@ if($result && $result->num_rows > 0){
     //abbiamo dei risultati della quary
     while($row = $result->fetch_assoc()){
         // var_dump($row);
-        $curr_department = new Department($row ["$id"], $row["name"]);
+        $curr_department = new Department($row["id"], $row["name"]);
         $departments[]= $curr_department;
     }
     // var_dump($departments);
